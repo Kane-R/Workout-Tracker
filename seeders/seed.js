@@ -4,7 +4,6 @@ require('dotenv/config');
 
 const dbConfig = process.env.MONGODB_URI;
 
-
 mongoose.connect(dbConfig, {
   useNewUrlParser: true,
   useFindAndModify: false,

@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 require('dotenv/config');
 
-const dbConfig = process.env.MONGODB_URI;
+const dbConfig = process.env.MONGODB_URI || "mongodb://localhost/workoutdb";
 
 
 async function connectDB(){
@@ -12,6 +12,5 @@ async function connectDB(){
   console.log("Connected to DB")
 );
 }
-
 
 module.exports = connectDB;
